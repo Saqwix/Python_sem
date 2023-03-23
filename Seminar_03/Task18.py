@@ -6,3 +6,19 @@
 #     1 2 3 4 5
 #     6
 #     -> 5
+
+N = abs(int(input('Количество элементов списка А: ')))
+E = input("Ввелите элементы списка через ПРОБЕЛ: ").split()
+num = list(map(int, E))
+if len(num) != N or N == 0:
+    print('Введенные элементы не соответствуют заявленному количеству!')
+else:
+    X = int(input('Введите число, с которым необходимо сравнивать элементы списка: '))
+    min = abs(X - num[0])
+    index = 0
+    for i in range(1, N):
+        count = abs(X - num[i])
+        if count < min:
+            min = count
+            index = i
+    print(f'-> {num[index]}')
