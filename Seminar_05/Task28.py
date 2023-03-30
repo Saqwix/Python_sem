@@ -4,3 +4,10 @@
 # *Пример:*
 # 2 2
 #     4
+
+def recfunsum(a, b):
+    if b == 0:
+        return a
+    return 1 + recfunsum(a, b - 1)
+
+print(recfunsum(2, 2))
