@@ -2,3 +2,14 @@
 # *Пример:*
 # A = 3; B = 5 -> 243 (3⁵)
 #     A = 2; B = 3 -> 8 
+
+
+def recAinB(a, b):
+    if b == 0:
+        return 1
+    return a * recAinB(a, b - 1)
+
+a = int(input('Введите число: '))
+b = int(input('Введите целую степень: '))
+
+print(recAinB(a, b))
